@@ -41,7 +41,7 @@ ol {
 }
 .content {
   width: 1200px;
-  padding: 133px 30px 133px 30px;
+  padding: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -54,8 +54,7 @@ ol {
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
-  gap:40px;
-
+  gap: 40px;
 }
 .content__list {
   position: relative;
@@ -64,6 +63,7 @@ ol {
   overflow-x: hidden;
 }
 .content__details {
+  width: 399px;
   display: flex;
   flex-direction: column;
 }
@@ -81,31 +81,30 @@ ol {
   object-position: center;
 }
 
-.content__list-item {
-  width: 394px;
-  text-overflow: clip;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.content__list-item:not(:last-child){
+.content__list-item:not(:last-child) {
   margin-bottom: 32px;
 }
 
 .content__video-card {
   display: flex;
-  justify-content: space-between;
+  align-items: start;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
-  min-height: 103px;
+  height: 103px;
   object-fit: cover;
   object-position: center;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
 }
 
 .content__video-card-description-container {
   flex-grow: 1;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-bottom: 4px;
 }
 
 .search-form__fieldset-title {
@@ -113,7 +112,7 @@ ol {
   font-weight: 400;
   font-size: 18px;
 }
-.search-form__fieldset{
+.search-form__fieldset {
   border: 0;
   width: 212px;
 }
@@ -140,12 +139,14 @@ ol {
   line-height: 30px;
   font-weight: 700;
   font-family: Oswald, sans-serif;
+  text-overflow: clip;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .content__video-card-description {
   line-height: 16.2px;
   padding-top: 6px;
   font-weight: 400;
-  min-height: 65px;
 }
 
 .visually-hidden {
@@ -190,9 +191,9 @@ ol {
   width: 225px;
   padding-top: 2.5px;
   padding-right: 14px;
-  padding-bottom:2.5px;
+  padding-bottom: 2.5px;
   background-color: transparent;
-  font-family:inherit;
+  font-family: inherit;
   border-block: 1px solid white;
   border-inline: 0px;
   margin-top: 5px;
@@ -226,7 +227,8 @@ ol {
   outline-offset: 1px;
 }
 
-.search-form__checkbox[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
+.search-form__checkbox[type="checkbox"]:checked
+  + .search-form__pseudo-checkbox::before {
   display: block;
   content: "";
   margin: 1px;
@@ -263,9 +265,8 @@ ol {
 }
 .content__card-link:focus-visible {
   outline: 1px solid white;
-
 }
-.content__card-link:active{
+.content__card-link:active {
   text-decoration: none;
   background-color: #545050;
 }
